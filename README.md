@@ -16,6 +16,8 @@ Author: Samuel Zizzo
 - Clear button to reset inputs and results
 - Simple, user-friendly GUI built with `tkinter`
 
+---
+
 ## Installation
 
 1. Clone the repository:
