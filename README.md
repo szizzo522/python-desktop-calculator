@@ -1,52 +1,89 @@
-# Calculator Project
+# Python Desktop Calculator
 
-This is a simple calculator application developed in Python. It provides basic arithmetic operations such as addition, subtraction, multiplication, and division. The application now features a graphical user interface (GUI) built with `tkinter`.
+A lightweight desktop calculator application built with Python and Tkinter.
+It supports basic arithmetic operations with input validation and a clean graphical user interface (GUI).
+
+Author: Samuel Zizzo
+
+---
 
 ## Features
 
 - Addition
 - Subtraction
 - Multiplication
-- Division (with error handling for division by zero)
+- Division (with division-by-zero handling)
 - Clear button to reset inputs and results
-- User-friendly GUI built with `tkinter`
+- Simple, user-friendly GUI built with `tkinter`
+
+---
+
+## Project Structure
+
+python-desktop-calculator/
+├── calculator/
+│   ├── __init__.py
+│   ├── __main__.py
+│   └── app.py
+├── README.md
+├── LICENSE
+└── requirements.txt
+
+---
 
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/Calculator.git
-   cd Calculator
-   ```
 
-2. Run the calculator:
-   ```bash
-   python calculator/main.py
-   ```
+   git clone https://github.com/szizzo522/python-desktop-calculator.git
+   cd python-desktop-calculator
 
-(Optional) To use a virtual environment:
-   ```bash
+2. (Optional) Create and activate a virtual environment:
+
    python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
+   source venv/bin/activate     # macOS / Linux
+   venv\Scripts\activate        # Windows
+
+---
 
 ## Usage
 
-To run the calculator, execute the following command:
-```
-python calculator/main.py
-```
+Run the application using Python’s module execution:
+
+python -m calculator
 
 A GUI window will open where you can:
-- Enter two numbers.
-- Perform addition, subtraction, multiplication, or division.
-- Clear the inputs and results.
+- Enter two numbers
+- Perform addition, subtraction, multiplication, or division
+- Clear the inputs and result display
+
+---
+
+## Requirements
+
+- Python 3.10 or newer
+- Tkinter (included with standard Python installations)
+
+---
+
+## Why I Built This
+
+This project was built to practice:
+- Python GUI development with Tkinter
+- Input validation and error handling
+- Clean project structure and modular design
+- Writing professional, well-documented code suitable for a portfolio
+
+---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
+See the LICENSE file for details.
+
+---
 
 ## Contributing
 
-***This was made using Python version 3.16.2.***  
-***Feel free to submit issues or pull requests for improvements or bug fixes.***
+Contributions are welcome.
+Feel free to open an issue or submit a pull request for improvements or bug fixes.

@@ -1,8 +1,11 @@
 """
-Calculator Package
+calculator
 
-This package contains the main calculator application with a GUI built using tkinter.
+A simple desktop calculator application built with Python and Tkinter.
+
+Author: Samuel Zizzo
 """
 
-# Import the main module
-from .main import *
+from .app import run_app
+
+__all__ = ["run_app"]
