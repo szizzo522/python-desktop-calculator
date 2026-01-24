@@ -16,21 +16,6 @@ Author: Samuel Zizzo
 - Clear button to reset inputs and results
 - Simple, user-friendly GUI built with `tkinter`
 
----
-
-## Project Structure
-
-python-desktop-calculator/
-├── calculator/
-│   ├── __init__.py
-│   ├── __main__.py
-│   └── app.py
-├── README.md
-├── LICENSE
-└── requirements.txt
-
----
-
 ## Installation
 
 1. Clone the repository:
