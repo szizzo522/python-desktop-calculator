@@ -31,21 +31,17 @@ python -m tkinter
 A small test window should appear.
 
 ## Running the Application
-1. Clone the Repository
 Open Terminal (macOS) or Command Prompt / PowerShell (Windows):
 ```bash
 git clone https://github.com/szizzo522/python-desktop-calculator.git
-cd python-desktop-calculator```
-
-2. Run the Calculator
-
-Run the program using Python:
-
+cd python-desktop-calculator
+```
+Run the Calculator:
+```bash
 python calculator.py
-
+```
 If the above command does not work, try:
-
+```bash
 python3 calculator.py
-3. Application Launch
-
-A desktop calculator window should open.
+```
+**A desktop calculator window should open.**
