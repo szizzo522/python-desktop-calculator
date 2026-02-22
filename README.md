@@ -1,6 +1,5 @@
 # Python Desktop Calculator
 
-
 ## Demo
 
 **Check out my other projects on [YouTube](https://www.youtube.com/@Research-Farm/videos)**
