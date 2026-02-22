@@ -1,76 +1,40 @@
 # Python Desktop Calculator
 
-A lightweight desktop calculator application built with Python and Tkinter.
-It supports basic arithmetic operations with input validation and a clean graphical user interface (GUI).
+A lightweight desktop calculator built with **Python** and **Tkinter**.  
+The application provides a simple graphical interface for performing basic arithmetic operations.
 
-Author: Samuel Zizzo
 
 ---
 
-## Features
+## Overview
+
+This calculator allows users to perform:
 
 - Addition
 - Subtraction
 - Multiplication
-- Division (with division-by-zero handling)
-- Clear button to reset inputs and results
-- Simple, user-friendly GUI built with `tkinter`
+- Division
+- Input validation
+- Division-by-zero protection
+- Reset/Clear functionality
+
+The application runs locally as a desktop GUI.
+
+---
+
+## Technologies Used
+
+- Python 3
+- Tkinter (standard Python GUI library)
+
+No external dependencies are required.
 
 ---
 
 ## Installation
 
-1. Clone the repository:
+### 1. Clone the Repository
 
-   git clone https://github.com/szizzo522/python-desktop-calculator.git
-   cd python-desktop-calculator
-
-2. (Optional) Create and activate a virtual environment:
-
-   python -m venv venv
-   source venv/bin/activate     # macOS / Linux
-   venv\Scripts\activate        # Windows
-
----
-
-## Usage
-
-Run the application using Python’s module execution:
-
-python -m calculator
-
-A GUI window will open where you can:
-- Enter two numbers
-- Perform addition, subtraction, multiplication, or division
-- Clear the inputs and result display
-
----
-
-## Requirements
-
-- Python 3.10 or newer
-- Tkinter (included with standard Python installations)
-
----
-
-## Why I Built This
-
-This project was built to practice:
-- Python GUI development with Tkinter
-- Input validation and error handling
-- Clean project structure and modular design
-- Writing professional, well-documented code suitable for a portfolio
-
----
-
-## License
-
-This project is licensed under the MIT License.
-See the LICENSE file for details.
-
----
-
-## Contributing
-
-Contributions are welcome.
-Feel free to open an issue or submit a pull request for improvements or bug fixes.
+```bash
+git clone https://github.com/szizzo522/python-desktop-calculator.git
+cd python-desktop-calculator
