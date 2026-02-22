@@ -49,10 +49,10 @@ cd python-desktop-calculator
 ```
 Run the Calculator:
 ```bash
-python calculator.py
+python app.py
 ```
 If the above command does not work, try:
 ```bash
-python3 calculator.py
+python3 app.py
 ```
 **A desktop calculator window should open.**
