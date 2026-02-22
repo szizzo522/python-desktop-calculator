@@ -19,15 +19,15 @@ During installation, make sure to check: **Add Python to PATH**
 After installation, open Terminal (macOS) or Command Prompt (Windows) and run:
 ```bash
 python --version
-
+```
 Expected output:
 ```bash
 Python 3.11.x
-
+```
 Verify Tkinter is working:
 ```bash
-python -m tkinter```
-
+python -m tkinter
+```
 A small test window should appear.
 
 ## Running the Application
