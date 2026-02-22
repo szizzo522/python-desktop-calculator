@@ -31,6 +31,8 @@ python -m tkinter
 ```
 A small test window should appear.
 
+---
+
 ## Running the Application
 Open Terminal (macOS) or Command Prompt / PowerShell (Windows):
 ```bash
