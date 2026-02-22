@@ -6,7 +6,7 @@ This application provides a simple GUI for performing mathematical operations.
 
 ## Demo
 
-**Watch the demo[HERE](https://www.youtube.com/watch?v=eSiTjAktJIQ):**
+**Check out my other projects on [YouTube](https://www.youtube.com/watch?v=eSiTjAktJIQ)**
 
 [![Watch the Demo](https://img.youtube.com/vi/eSiTjAktJIQ/0.jpg)](https://www.youtube.com/watch?v=eSiTjAktJIQ)
 
