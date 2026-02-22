@@ -6,30 +6,19 @@ This application provides a simple GUI for performing basic mathematical operati
 ## Overview
 
 This calculator allows users to perform:
-
 - Addition
 - Subtraction
 - Multiplication
 - Division
-- Input validation
-- Division-by-zero protection
-- Reset/Clear functionality
-
-The application runs locally as a desktop GUI.
-
----
 
 ## Technologies Used
 
 - Python 3
 - Tkinter (standard Python GUI library)
 
-No external dependencies are required.
+No external dependencies required.
 
----
-
-## Installation
-
+## Install
 ### 1. Clone the Repository
 
 ```bash
