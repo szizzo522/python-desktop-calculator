@@ -1,8 +1,6 @@
 # Python Desktop Calculator
 Lightweight Python desktop calculator, This was an assignment for my **Intro to Computer Science** Course with **Professor Stevan Stankovic**
 
-This project helped reinforce core programming concepts while introducing practical development workflows such as writing structured Python code, building graphical user interfaces with Tkinter, and using Git and GitHub for version control and project management.
-
 Through this assignment, I learned how to design a functional desktop application, handle user input validation, and properly publish and document software projects.
 ## Demo
 
