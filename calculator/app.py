@@ -1,149 +1,89 @@
-"""
-Desktop Calculator Application
-
-A simple GUI-based calculator built using Python and Tkinter.
-Supports basic arithmetic operations with input validation.
-
-Author: Samuel Zizzo
-"""
-
-# ----------------------------
-# Imports
-# ----------------------------
-
 import tkinter as tk
 from tkinter import messagebox
 
+def start_calculator() -> None:
+    window = tk.Tk()
+    window.title("Calculator")
+    window.resizable(False, False)
 
-# ----------------------------
-# Arithmetic Operation Functions
-# ----------------------------
+    # --- helpers ---
+    def read_inputs() -> tuple[float, float]:
+        try:
+            return float(first_input.get()), float(second_input.get())
+        except ValueError as exc:
+            raise ValueError("numbers only") from exc
 
-def add():
-    """
-    Adds the two numbers entered by the user.
-    Displays the result or an error message if input is invalid.
-    """
-    try:
-        result = float(entry1.get()) + float(entry2.get())
-        label_result.config(text=f"Result: {result}")
-    except ValueError:
-        messagebox.showerror("Invalid Input", "Please enter valid numbers.")
-
-
-def subtract():
-    """
-    Subtracts the second number from the first number.
-    Displays the result or an error message if input is invalid.
-    """
-    try:
-        result = float(entry1.get()) - float(entry2.get())
-        label_result.config(text=f"Result: {result}")
-    except ValueError:
-        messagebox.showerror("Invalid Input", "Please enter valid numbers.")
-
-
-def multiply():
-    """
-    Multiplies the two numbers entered by the user.
-    Displays the result or an error message if input is invalid.
-    """
-    try:
-        result = float(entry1.get()) * float(entry2.get())
-        label_result.config(text=f"Result: {result}")
-    except ValueError:
-        messagebox.showerror("Invalid Input", "Please enter valid numbers.")
-
-
-def divide():
-    """
-    Divides the first number by the second number.
-    Handles division-by-zero and invalid input cases.
-    """
-    try:
-        num1 = float(entry1.get())
-        num2 = float(entry2.get())
-
-        if num2 == 0:
-            label_result.config(text="Error! Cannot Divide by Zero.")
+    def show_result(value: float) -> None:
+        if value.is_integer():
+            result_text.config(text=f"Result: {int(value)}")
         else:
-            result = num1 / num2
-            label_result.config(text=f"Result: {result}")
+            result_text.config(text=f"Result: {value}")
 
-    except ValueError:
+    def input_error() -> None:
         messagebox.showerror("Invalid Input", "Please enter valid numbers.")
 
+    # --- operations ---
+    def do_add() -> None:
+        try:
+            a, b = read_inputs()
+            show_result(a + b)
+        except ValueError:
+            input_error()
 
-# ----------------------------
-# Utility Functions
-# ----------------------------
+    def do_subtract() -> None:
+        try:
+            a, b = read_inputs()
+            show_result(a - b)
+        except ValueError:
+            input_error()
 
-def clear():
-    """
-    Clears both input fields and resets the result label.
-    """
-    entry1.delete(0, tk.END)
-    entry2.delete(0, tk.END)
-    label_result.config(text="Result: ")
+    def do_multiply() -> None:
+        try:
+            a, b = read_inputs()
+            show_result(a * b)
+        except ValueError:
+            input_error()
 
+    def do_divide() -> None:
+        try:
+            a, b = read_inputs()
+            if b == 0:
+                result_text.config(text="Error: Cannot divide by zero.")
+                return
+            show_result(a / b)
+        except ValueError:
+            input_error()
 
-# ----------------------------
-# Application Runner
-# ----------------------------
+    def reset() -> None:
+        first_input.delete(0, tk.END)
+        second_input.delete(0, tk.END)
+        result_text.config(text="Result:")
+        first_input.focus_set()
 
-def run_app():
-    """
-    Initializes and runs the calculator GUI application.
-    """
-    global root, entry1, entry2, label_result
+    # --- UI ---
+    tk.Label(window, text="Enter first number:").grid(row=0, column=0, padx=10, pady=5, sticky="e")
+    first_input = tk.Entry(window)
+    first_input.grid(row=0, column=1, padx=10, pady=5)
 
-    # Create the main application window
-    root = tk.Tk()
-    root.title("Calculator")
+    tk.Label(window, text="Enter second number:").grid(row=1, column=0, padx=10, pady=5, sticky="e")
+    second_input = tk.Entry(window)
+    second_input.grid(row=1, column=1, padx=10, pady=5)
 
-    # ----------------------------
-    # Input Fields
-    # ----------------------------
+    tk.Button(window, text="Add", command=do_add, width=12).grid(row=2, column=0, padx=10, pady=5)
+    tk.Button(window, text="Subtract", command=do_subtract, width=12).grid(row=2, column=1, padx=10, pady=5)
+    tk.Button(window, text="Multiply", command=do_multiply, width=12).grid(row=3, column=0, padx=10, pady=5)
+    tk.Button(window, text="Divide", command=do_divide, width=12).grid(row=3, column=1, padx=10, pady=5)
 
-    tk.Label(root, text="Enter first number:").grid(row=0, column=0, padx=10, pady=5)
-    entry1 = tk.Entry(root)
-    entry1.grid(row=0, column=1, padx=10, pady=5)
+    tk.Button(window, text="Clear", command=reset).grid(row=4, column=0, columnspan=2, padx=10, pady=5)
 
-    tk.Label(root, text="Enter second number:").grid(row=1, column=0, padx=10, pady=5)
-    entry2 = tk.Entry(root)
-    entry2.grid(row=1, column=1, padx=10, pady=5)
+    result_text = tk.Label(window, text="Result:")
+    result_text.grid(row=5, column=0, columnspan=2, padx=10, pady=10)
 
-    # ----------------------------
-    # Operation Buttons
-    # ----------------------------
+    window.bind("<Escape>", lambda _e: reset())
 
-    tk.Button(root, text="Add", command=add).grid(row=2, column=0, padx=10, pady=5)
-    tk.Button(root, text="Subtract", command=subtract).grid(row=2, column=1, padx=10, pady=5)
-    tk.Button(root, text="Multiply", command=multiply).grid(row=3, column=0, padx=10, pady=5)
-    tk.Button(root, text="Divide", command=divide).grid(row=3, column=1, padx=10, pady=5)
+    first_input.focus_set()
+    window.mainloop()
 
-    # ----------------------------
-    # Clear Button
-    # ----------------------------
-
-    tk.Button(root, text="Clear", command=clear).grid(
-        row=4, column=0, columnspan=2, padx=10, pady=5
-    )
-
-    # ----------------------------
-    # Result Display
-    # ----------------------------
-
-    label_result = tk.Label(root, text="Result: ")
-    label_result.grid(row=5, column=0, columnspan=2, padx=10, pady=10)
-
-    # Start the Tkinter event loop
-    root.mainloop()
-
-
-# ----------------------------
-# Script Entry Point
-# ----------------------------
 
 if __name__ == "__main__":
-    run_app()
+    start_calculator()
