@@ -1,5 +1,5 @@
 # Python Desktop Calculator
-Lightweight Python desktop calculator, This was an assignment for my Intro to Computer Science Course with Professor Stevan Stankovic
+Lightweight Python desktop calculator, This was an assignment for my **Intro to Computer Science** Course with **Professor Stevan Stankovic**
 
 ## Demo
 
