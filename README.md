@@ -1,8 +1,5 @@
 # Python Desktop Calculator
-Lightweight desktop calculator.  
-This application provides a simple GUI for performing mathematical operations.
 
----
 
 ## Demo
 
