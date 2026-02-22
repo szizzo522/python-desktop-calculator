@@ -1,5 +1,5 @@
 # Python Desktop Calculator
-Simple Python desktop calculator, This was an assignment from my Intro to Computer Science Course with Professor Stevan Stankovic\
+Simple Python desktop calculator, This was an assignment for my Intro to Computer Science Course with Professor Stevan Stankovic
 
 ## Demo
 
