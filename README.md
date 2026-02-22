@@ -17,6 +17,7 @@ During installation, make sure to check: **Add Python to PATH**
 
 ## Verify Python Installation
 After installation, open Terminal (macOS) or Command Prompt (Windows) and run:
+
 ```bash
 python --version
 ```
