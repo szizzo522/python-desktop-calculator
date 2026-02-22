@@ -4,10 +4,11 @@ This application provides a simple GUI for performing mathematical operations.
 ## Demo
 
 [![Watch the Demo](https://img.youtube.com/vi/eSiTjAktJIQ/0.jpg)](https://www.youtube.com/watch?v=eSiTjAktJIQ)
+
 ---
 
 ## Requirements
--Python 3.11 or newer
+- Python 3.11 or newer
 
 Download Python 3.11:
 https://www.python.org/downloads/release/python-3110/
