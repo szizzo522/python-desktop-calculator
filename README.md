@@ -1,10 +1,7 @@
 # Python Desktop Calculator
 
-A lightweight desktop calculator built with **Python** and **Tkinter**.  
-The application provides a simple graphical interface for performing basic arithmetic operations.
-
-
----
+Lightweight desktop calculator built with Python and Tkinter.  
+This application provides a simple GUI for performing basic mathematical operations.
 
 ## Overview
 
