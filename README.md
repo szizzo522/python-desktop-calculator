@@ -11,7 +11,7 @@ Through this assignment, I learned how to design a functional desktop applicatio
 ---
 
 ## Requirements
-- Python 3.11 or newer
+- Python 3.11 or later
 
 Download Python 3.11:
 https://www.python.org/downloads/release/python-3110/
